@@ -1,22 +1,4 @@
-
-[2:43 AM, 6/12/2026] Elsayed Awad: <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منيو قرمشة</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#2a0000] text-white min-h-screen p-4">
-
-    <h1 class="text-center text-4xl font-black text-yellow-500 my-8">قرمشة</h1>
-
-    <div class="max-w-md mx-auto space-y-4">
-        <!-- الوجبات -->
-        <div class="bg-[#1a0000] border border-yellow-700 p-4 rounded-xl flex justify-between items-center">
-            <span class="font-bold">وجبة السنافر - 90 ج</span>
-            <a href="https://wa.me/201008622373?text=اريد طلب وجبة السنافر" class="bg-green-600 px-6 py-2 rounded-lg font-bold hover:bg-green-…
-[2:50 AM, 6/12/2026] Elsayed Awad: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -27,30 +9,43 @@
 </head>
 <body class="p-2">
 
-    <!-- القائمة الاحترافية -->
-    <div class="bg-[#8B0000] p-4 rounded-2xl shadow-xl border-2 border-yellow-500 mb-6">
-        <h2 class="text-white text-center font-black text-2xl mb-4">ركن البروستد الذهبي</h2>
+    <!-- المنيو الرئيسي (داخل الإطار كما في image_14.png) -->
+    <div class="bg-[#8B0000] p-4 rounded-3xl border-2 border-yellow-600 shadow-2xl mb-6">
+        <h2 class="text-white text-center font-black text-2xl mb-6">ركن البروستد الذهبي</h2>
         
-        <!-- الوجبات مع السعر والزر في سطر واحد -->
-        <div class="space-y-3">
-            <div class="flex items-center justify-between bg-black/20 p-3 rounded-xl">
-                <span class="text-white font-bold">وجبة السنافر (90 ج)</span>
-                <a href="https://wa.me/201008622373?text=اريد طلب وجبة السنافر" class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-sm">اطلبه الآن</a>
+        <div class="space-y-4">
+            <!-- وجبة السنافر -->
+            <div class="flex items-center justify-between">
+                <a href="https://wa.me/201008622373?text=اريد طلب وجبة السنافر" class="bg-green-600 text-white px-5 py-1.5 rounded-lg font-bold text-sm">اطلبه الآن</a>
+                <span class="text-white font-bold text-lg">وجبة السنافر (90 ج)</span>
             </div>
             
-            <div class="flex items-center justify-between bg-black/20 p-3 rounded-xl">
-                <span class="text-white font-bold">وجبة التوفير (130 ج)</span>
-                <a href="https://wa.me/201008622373?text=اريد طلب وجبة التوفير" class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-sm">اطلبه الآن</a>
+            <!-- وجبة التوفير -->
+            <div class="flex items-center justify-between">
+                <a href="https://wa.me/201008622373?text=اريد طلب وجبة التوفير" class="bg-green-600 text-white px-5 py-1.5 rounded-lg font-bold text-sm">اطلبه الآن</a>
+                <span class="text-white font-bold text-lg">وجبة التوفير (130 ج)</span>
+            </div>
+
+            <!-- وجبة الوحش -->
+            <div class="flex items-center justify-between">
+                <a href="https://wa.me/201008622373?text=اريد طلب وجبة الوحش" class="bg-green-600 text-white px-5 py-1.5 rounded-lg font-bold text-sm">اطلبه الآن</a>
+                <span class="text-white font-bold text-lg">وجبة الوحش (165 ج)</span>
             </div>
         </div>
     </div>
 
-    <!-- قسم صور الدعاية -->
-    <div class="grid grid-cols-2 gap-2">
-        <img src="image_10.png" class="rounded-lg border border-yellow-700">
-        <img src="image_11.png" class="rounded-lg border border-yellow-700">
-        <img src="image_12.png" class="rounded-lg border border-yellow-700">
-        <img src="image_13.png" class="rounded-lg border border-yellow-700">
+    <!-- قسم العروض المميزة -->
+    <h3 class="text-white text-center font-bold text-xl mb-4">عروضنا المميزة</h3>
+    <div class="grid grid-cols-2 gap-3">
+        <img src="image_10.png" class="rounded-2xl">
+        <img src="image_11.png" class="rounded-2xl">
+        <img src="image_12.png" class="rounded-2xl">
+        <img src="image_13.png" class="rounded-2xl">
+    </div>
+
+    <!-- زر التواصل السريع -->
+    <div class="fixed bottom-4 left-4">
+        <a href="https://wa.me/201008622373" class="bg-green-500 text-white p-4 rounded-full shadow-lg font-bold">واتساب 💬</a>
     </div>
 
 </body>
