@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منيو قرمشة الفاخر</title>
+    <title>قرمشة - الطعم الأصلي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
@@ -12,41 +12,40 @@
     <h1 class="text-center text-5xl font-black text-yellow-500 my-8">قرمشة</h1>
 
     <div x-data="{ 
-        selectedItem: {name: 'وجبة السنافر', price: '90 ج', desc: 'قطعتين بروستد مع البطاطس والخبز', img: 'IMG_4600.png'},
+        selectedItem: {name: 'وجبة السنافر', price: '90 ج', desc: 'قطعتين بروستد مقرمش + بطاطس وخبز', img: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=500'},
         menu: [
-            {name: 'وجبة السنافر', price: '90 ج', desc: 'قطعتين بروستد مع البطاطس والخبز', img: 'IMG_4600.png'},
-            {name: 'وجبة التوفير', price: '130 ج', desc: '3 قطع بروستد، الأكثر مبيعاً!', img: 'IMG_4601.png'},
-            {name: 'وجبة الوحش', price: '165 ج', desc: '4 قطع بروستد مقرمشة', img: 'IMG_4603.png'},
-            {name: 'عيلة قرمشة', price: '310 ج', desc: '8 قطع، لتر بيبسي، بطاطس عائلي', img: 'IMG_4604.png'},
-            {name: 'زنجر كلاسيك', price: '65 ج', desc: 'ساندوتش زنجر كلاسيك', img: 'IMG_4605.png'},
-            {name: 'زنجر سوبر سبايسي', price: '75 ج', desc: 'زنجر حراق يظبط الدماغ', img: 'IMG_4606.png'}
+            {name: 'وجبة السنافر', price: '90 ج', desc: 'قطعتين بروستد مقرمش + بطاطس وخبز', img: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=500'},
+            {name: 'وجبة التوفير', price: '130 ج', desc: '3 قطع بروستد، الخيار الأكثر طلباً', img: 'https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=500'},
+            {name: 'وجبة الوحش', price: '165 ج', desc: '4 قطع بروستد مع صوص القرمشة', img: 'https://images.unsplash.com/photo-1598182198871-d3f4ab4fd101?q=80&w=500'},
+            {name: 'زنجر كلاسيك', price: '65 ج', desc: 'ساندوتش زنجر كلاسيك طازج', img: 'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=500'},
+            {name: 'زنجر سوبر سبايسي', price: '75 ج', desc: 'زنجر حراق يظبط الدماغ', img: 'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=500'}
         ]
     }">
 
-        <!-- قائمة المنيو (التي يختار منها) -->
+        <!-- قائمة الاختيار -->
         <div class="grid grid-cols-2 gap-3 mb-8">
             <template x-for="item in menu">
                 <button @click="selectedItem = item" 
-                        class="bg-[#1a0000] p-3 rounded-xl border border-yellow-700 hover:border-yellow-400 transition-all text-sm font-bold">
+                        class="bg-[#1a0000] p-3 rounded-xl border border-yellow-700 hover:border-yellow-400 transition-all text-sm font-bold shadow-lg">
                     <span x-text="item.name"></span>
                 </button>
             </template>
         </div>
 
-        <!-- منطقة عرض الوجبة المختارة -->
-        <div class="bg-[#1a0000] border-2 border-yellow-500 rounded-3xl p-6 shadow-2xl">
-            <img :src="selectedItem.img" class="w-full h-64 object-cover rounded-xl mb-4">
+        <!-- منطقة العرض -->
+        <div class="bg-[#1a0000] border-2 border-yellow-600 rounded-3xl p-6 shadow-2xl">
+            <img :src="selectedItem.img" class="w-full h-64 object-cover rounded-2xl mb-6 border-2 border-yellow-500">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-3xl font-bold" x-text="selectedItem.name"></h2>
-                <span class="text-2xl font-black text-yellow-400" x-text="selectedItem.price"></span>
+                <span class="text-3xl font-black text-yellow-400" x-text="selectedItem.price"></span>
             </div>
-            <p class="text-gray-300 mb-6" x-text="selectedItem.desc"></p>
+            <p class="text-gray-300 mb-8 text-lg" x-text="selectedItem.desc"></p>
+            
             <a :href="'https://wa.me/201008622373?text=اريد طلب ' + selectedItem.name" 
-               class="block w-full bg-green-600 text-center py-4 rounded-xl text-xl font-bold shadow-lg">
-                طلب عبر واتساب 📲
+               class="block w-full bg-green-600 hover:bg-green-500 text-center py-4 rounded-2xl text-2xl font-bold shadow-xl transition-all">
+                اطلب الآن عبر واتساب 📲
             </a>
         </div>
     </div>
-
 </body>
 </html>
