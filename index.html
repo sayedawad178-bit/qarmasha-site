@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #2a0000; }
@@ -9,43 +10,26 @@
 </head>
 <body class="p-2">
 
-    <!-- المنيو الرئيسي (داخل الإطار كما في image_14.png) -->
-    <div class="bg-[#8B0000] p-4 rounded-3xl border-2 border-yellow-600 shadow-2xl mb-6">
-        <h2 class="text-white text-center font-black text-2xl mb-6">ركن البروستد الذهبي</h2>
-        
-        <div class="space-y-4">
-            <!-- وجبة السنافر -->
-            <div class="flex items-center justify-between">
-                <a href="https://wa.me/201008622373?text=اريد طلب وجبة السنافر" class="bg-green-600 text-white px-5 py-1.5 rounded-lg font-bold text-sm">اطلبه الآن</a>
-                <span class="text-white font-bold text-lg">وجبة السنافر (90 ج)</span>
-            </div>
-            
-            <!-- وجبة التوفير -->
-            <div class="flex items-center justify-between">
-                <a href="https://wa.me/201008622373?text=اريد طلب وجبة التوفير" class="bg-green-600 text-white px-5 py-1.5 rounded-lg font-bold text-sm">اطلبه الآن</a>
-                <span class="text-white font-bold text-lg">وجبة التوفير (130 ج)</span>
-            </div>
-
-            <!-- وجبة الوحش -->
-            <div class="flex items-center justify-between">
-                <a href="https://wa.me/201008622373?text=اريد طلب وجبة الوحش" class="bg-green-600 text-white px-5 py-1.5 rounded-lg font-bold text-sm">اطلبه الآن</a>
-                <span class="text-white font-bold text-lg">وجبة الوحش (165 ج)</span>
-            </div>
-        </div>
+    <!-- صورة المنيو الرئيسية -->
+    <div class="mb-6">
+        <!-- تأكد أن اسم الملف هنا يطابق اسم صورتك بالضبط -->
+        <img src="menu.png" alt="المنيو" class="w-full rounded-2xl border-2 border-yellow-600 shadow-2xl">
     </div>
 
     <!-- قسم العروض المميزة -->
     <h3 class="text-white text-center font-bold text-xl mb-4">عروضنا المميزة</h3>
-    <div class="grid grid-cols-2 gap-3">
-        <img src="image_10.png" class="rounded-2xl">
-        <img src="image_11.png" class="rounded-2xl">
-        <img src="image_12.png" class="rounded-2xl">
-        <img src="image_13.png" class="rounded-2xl">
+    <div class="grid grid-cols-3 gap-2">
+        <!-- تأكد من مطابقة أسماء الملفات هنا -->
+        <img src="offer1.png" class="rounded-xl border border-yellow-700">
+        <img src="offer2.png" class="rounded-xl border border-yellow-700">
+        <img src="offer3.png" class="rounded-xl border border-yellow-700">
     </div>
 
     <!-- زر التواصل السريع -->
-    <div class="fixed bottom-4 left-4">
-        <a href="https://wa.me/201008622373" class="bg-green-500 text-white p-4 rounded-full shadow-lg font-bold">واتساب 💬</a>
+    <div class="fixed bottom-4 right-4">
+        <a href="https://wa.me/201008622373" class="bg-green-600 text-white p-4 rounded-full shadow-2xl font-bold">
+            واتساب 💬
+        </a>
     </div>
 
 </body>
