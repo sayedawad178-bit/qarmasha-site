@@ -2,58 +2,51 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>منيو قرمشة - الأصلي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قرمشة - الطعم الأصلي</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-[#8B0000] text-white p-4 font-sans">
-    <h1 class="text-center text-5xl font-black text-yellow-400 mb-8 mt-4">قرمشة</h1>
+<body class="bg-[#2a0000] text-white min-h-screen">
 
-    <div class="max-w-md mx-auto space-y-4" x-data="{ selected: null }">
+    <header class="text-center py-10 bg-gradient-to-b from-[#8B0000] to-[#2a0000]">
+        <h1 class="text-6xl font-black text-yellow-500 drop-shadow-2xl">قرمشة</h1>
+        <p class="text-xl mt-2 opacity-80 italic">الطعم اللي يدخل الدماغ!</p>
+    </header>
+
+    <main class="max-w-3xl mx-auto p-4 space-y-8">
         
-        <!-- وجبة السنافر -->
-        <div class="bg-white/10 rounded-2xl p-4 border-2 border-yellow-500">
-            <button @click="selected = (selected === 1 ? null : 1)" class="w-full flex justify-between items-center text-xl font-bold">
-                <span>🍗 وجبة السنافر</span>
-                <span class="text-yellow-400">90 ج</span>
-            </button>
-            <div x-show="selected === 1" class="mt-4 pt-4 border-t border-white/20">
-                <img src="IMG_4600.png" class="rounded-lg mb-3 w-full">
-                <p class="mb-4 text-sm opacity-90">قطعتين بروستد مقرمش، بطاطس، وخبز.</p>
-                <a href="https://wa.me/201008622373?text=اريد طلب وجبة السنافر" class="block bg-green-600 text-center py-3 rounded-full font-bold text-lg shadow-lg">اطلب الآن عبر واتساب</a>
+        <div class="bg-[#1a0000] border border-yellow-700/50 rounded-3xl overflow-hidden shadow-2xl hover:border-yellow-400 transition-all">
+            <img src="IMG_4600.png" class="w-full h-80 object-cover">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-3xl font-bold">وجبة السنافر</h2>
+                    <span class="text-2xl font-black text-yellow-400">90 ج</span>
+                </div>
+                <p class="text-gray-300 mb-6 text-lg">قطعتين بروستد مقرمش مع البطاطس والخبز المحمص.</p>
+                <a href="https://wa.me/201008622373?text=اريد طلب وجبة السنافر" class="block w-full bg-green-600 hover:bg-green-500 text-center py-4 rounded-xl text-xl font-bold transition-all shadow-lg">
+                    طلب عبر واتساب 📲
+                </a>
             </div>
         </div>
 
-        <!-- وجبة التوفير -->
-        <div class="bg-white/10 rounded-2xl p-4 border-2 border-yellow-500">
-            <button @click="selected = (selected === 2 ? null : 2)" class="w-full flex justify-between items-center text-xl font-bold">
-                <span>🍗 وجبة التوفير</span>
-                <span class="text-yellow-400">130 ج</span>
-            </button>
-            <div x-show="selected === 2" class="mt-4 pt-4 border-t border-white/20">
-                <img src="IMG_4601.png" class="rounded-lg mb-3 w-full">
-                <p class="mb-4 text-sm opacity-90">3 قطع بروستد، الخيار الأكثر مبيعاً!</p>
-                <a href="https://wa.me/201008622373?text=اريد طلب وجبة التوفير" class="block bg-green-600 text-center py-3 rounded-full font-bold text-lg shadow-lg">اطلب الآن عبر واتساب</a>
+        <div class="bg-[#1a0000] border border-yellow-700/50 rounded-3xl overflow-hidden shadow-2xl">
+            <img src="IMG_4601.png" class="w-full h-80 object-cover">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-3xl font-bold">وجبة التوفير</h2>
+                    <span class="text-2xl font-black text-yellow-400">130 ج</span>
+                </div>
+                <p class="text-gray-300 mb-6 text-lg">3 قطع بروستد، الخيار الأكثر مبيعاً.</p>
+                <a href="https://wa.me/201008622373?text=اريد طلب وجبة التوفير" class="block w-full bg-green-600 hover:bg-green-500 text-center py-4 rounded-xl text-xl font-bold transition-all shadow-lg">
+                    طلب عبر واتساب 📲
+                </a>
             </div>
         </div>
 
-        <!-- زنجر سوبر سبايسي -->
-        <div class="bg-white/10 rounded-2xl p-4 border-2 border-yellow-500">
-            <button @click="selected = (selected === 3 ? null : 3)" class="w-full flex justify-between items-center text-xl font-bold">
-                <span>🍔 زنجر سوبر سبايسي</span>
-                <span class="text-yellow-400">75 ج</span>
-            </button>
-            <div x-show="selected === 3" class="mt-4 pt-4 border-t border-white/20">
-                <img src="IMG_4603.png" class="rounded-lg mb-3 w-full">
-                <p class="mb-4 text-sm opacity-90">ساندوتش زنجر حراق "يظبط الدماغ".</p>
-                <a href="https://wa.me/201008622373?text=اريد طلب زنجر سوبر سبايسي" class="block bg-green-600 text-center py-3 rounded-full font-bold text-lg shadow-lg">اطلب الآن عبر واتساب</a>
-            </div>
-        </div>
+    </main>
 
-    </div>
-
-    <footer class="text-center mt-12 opacity-60 text-sm">
-        <p>© جميع الحقوق محفوظة - قرمشة</p>
+    <footer class="text-center py-10 opacity-50">
+        <p>جميع الحقوق محفوظة © قرمشة</p>
     </footer>
 </body>
 </html>
